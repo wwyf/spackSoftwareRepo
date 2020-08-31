@@ -13,14 +13,15 @@ class Pmdk(Package):
     """
 
     homepage = "http://pmem.io/pmdk/"
-    url      = "https://github.com/pmem/pmdk/archive/1.5.tar.gz"
-    git      = "https://github.com/pmem/pmdk.git"
+    url      = "https://github.com/wwyf/pmdk/archive/1.5.tar.gz"
+    git      = "https://github.com/wwyf/pmdk.git"
 
     version('develop', branch='master')
-    version('1.8',     sha256='a241ea76ef76d233cb92826b6823ed48091a2fb6963282a4fea848dbce68aa21')
-    version('1.7', sha256='865ce1b422bc83109cb4a63dcff8fd1077eea3617e668faf6a043208d8be03ca')
-    version('1.6',     sha256='3b99e6c30709326a94d2e73a9247a8dfb58d0a394c5b7714e5c3d8a3ad2e2e9f')
-    version('1.5',     sha256='6b069d7207febeb62440e89245e8b18fcdf40b6170d2ec2ef33c252ed16db2d4')
+    version('1.9-header-legacy', branch='stable-1.9-use-header-legacy')
+    # version('1.8',     sha256='a241ea76ef76d233cb92826b6823ed48091a2fb6963282a4fea848dbce68aa21')
+    # version('1.7', sha256='865ce1b422bc83109cb4a63dcff8fd1077eea3617e668faf6a043208d8be03ca')
+    # version('1.6',     sha256='3b99e6c30709326a94d2e73a9247a8dfb58d0a394c5b7714e5c3d8a3ad2e2e9f')
+    # version('1.5',     sha256='6b069d7207febeb62440e89245e8b18fcdf40b6170d2ec2ef33c252ed16db2d4')
 
     depends_on('ncurses', when='@1.6:')
     # documentation requires doxygen and a bunch of other dependencies
